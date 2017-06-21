@@ -49,4 +49,14 @@ en:
     new:
       signup: "Sign up"
       this_will_be: "This will be a signup page for new users."
-
+      name: "name"
+      create: "Create my account"
+      pw_conf: "Password_confirmation"
+      email: "Email"
+      password: "Password"
+    create:
+      welcome: "Welcome to the Sample App!"
+  shared:
+    error_messages:
+      the_form_contains: "The form contains has"
+      error: "error"
