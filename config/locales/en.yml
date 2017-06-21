@@ -41,8 +41,12 @@ en:
     _header:
       help: "Help"
       home: "Home"
-      login: "log in"
+      login: "Log in"
       sample_app: "sample app"
+      users: "Users"
+      profile: "Profile"
+      settings: "Settings"
+      log_out: "Log out"
     application:
       rubyonrails: "Ruby on Rails Tutorial Sample App"
   users:
@@ -53,5 +57,11 @@ en:
       create_my_account: "Create my account"
     create:
       welcome: "welcome to the Sample App"
+  sessions:
+    create:
+      invalid: "Invalid email/password combination"
+    new:
+      signup_now: "Sign up now!"
+      login: "Log in"
 
 
