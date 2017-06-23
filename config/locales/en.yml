@@ -57,6 +57,10 @@ en:
       create_my_account: "Create my account"
     create:
       welcome: "welcome to the Sample App"
+    edit:
+      edit_user: "Edit user"
+      save_changes: "Save changes"
+      update_your_profile: "Update your profile"
   sessions:
     create:
       invalid: "Invalid email/password combination"
