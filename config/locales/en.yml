@@ -43,6 +43,11 @@ en:
       home: "Home"
       login: "log in"
       sample_app: "sample app"
+      users: "Users"
+      account: "Account"
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Log out"
     application:
       rubyonrails: "Ruby on Rails Tutorial Sample App"
   users:
@@ -60,3 +65,13 @@ en:
     error_messages:
       the_form_contains: "The form contains has"
       error: "error"
+  sessions:
+    create:
+      invalid: "Invalid email/password combination"
+    new:
+      new_user: "New user?"
+      login: "Log in"
+      email: "Email"
+      password: "Password"
+      signup_now: "Sign up now!"
+
