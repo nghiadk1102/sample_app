@@ -3,3 +3,11 @@ model:
     maximum_name: 50
     maximum_email: 255
     minimum_password: 6
+view:
+  users:
+    size: 50
+helpers:
+  size_gravatar: 80
+controller:
+  user_controller:
+    size_page: 20

@@ -51,6 +51,11 @@ en:
     application:
       rubyonrails: "Ruby on Rails Tutorial Sample App"
   users:
+    edit:
+      edit_users: "Edit User"
+      update_your_profile: "Update your profile"
+      save_changes: "Save changes"
+      please: "Please log in"
     new:
       signup: "Sign up"
       this_will_be: "This will be a signup page for new users."
@@ -59,8 +64,24 @@ en:
       pw_conf: "Password_confirmation"
       email: "Email"
       password: "Password"
+      create: "Create my account"
     create:
       welcome: "Welcome to the Sample App!"
+    form:
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      password_confirmation: "Password_confirmation"
+    index:
+      all_users: "All users"
+    user:
+      delete: "Delete"
+      you_sure: "You sure ?"
+    destroy:
+      user_delete: "User deleted"
+      error: "deleted error"
+    update:
+      profile_updated: "Profile updated"
   shared:
     error_messages:
       the_form_contains: "The form contains has"
