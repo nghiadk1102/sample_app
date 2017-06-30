@@ -10,8 +10,10 @@ class SessionsController < ApplicationController
       "1" == params[:session][:remember_me] ? remember(user) : forget(user)
       redirect_back_or user
     else
-      flash.now[:danger] = t ".invalid"
-      render :new
+      message  = t ".account_not_activated"
+      message += t ". check_email"
+      flash[:warning] = message
+      redirect_to root_url
     end
   end
 

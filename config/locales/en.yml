@@ -1,4 +1,7 @@
 en:
+  account_activations:
+    account_activated: "Account activated!"
+    invalid_activation_link: "Invalid activation link"
   static_pages:
     about:
       about: "About"
@@ -67,6 +70,7 @@ en:
       create: "Create my account"
     create:
       welcome: "Welcome to the Sample App!"
+      check_email: "Please check your email to activate your account."
     form:
       name: "Name"
       email: "Email"
@@ -89,6 +93,8 @@ en:
   sessions:
     create:
       invalid: "Invalid email/password combination"
+      account_not_activated: "Account not activated."
+      check_email: "Check your email for the activation link."
     new:
       new_user: "New user?"
       login: "Log in"
@@ -96,3 +102,12 @@ en:
       password: "Password"
       signup_now: "Sign up now!"
       remember: "Remember me on this computer"
+  user_mailer:
+    account_activation:
+      hi: "Hi"
+      welcome: "Welcome to the Sample App!
+        Click on the link below to activate your account:"
+      sample_app: "Sample app"
+      activate: "Activate"
+      account_act: "Account activate"
+
