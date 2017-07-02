@@ -32,6 +32,7 @@ en:
       signup_now: "Sign up now!"
       this_is_the_home_page: "This is the home page for the"
       welcome: "Welcome to the Sample App"
+      micropost_feed: "Micropost feed"
   layouts:
     _footer:
         about: "About"
@@ -78,18 +79,23 @@ en:
       password_confirmation: "Password_confirmation"
     index:
       all_users: "All users"
-    user:
-      delete: "Delete"
-      you_sure: "You sure ?"
     destroy:
       user_delete: "User deleted"
       error: "deleted error"
     update:
       profile_updated: "Profile updated"
+    show:
+      micropost: "Micropost"
   shared:
     error_messages:
       the_form_contains: "The form contains has"
       error: "error"
+    micropost_form:
+      post: "Post"
+      compose_new_micropost: "Compose new micropost"
+    user_info:
+      view_my_profile: "View my profile"
+      micropost: "Micropost"
   sessions:
     create:
       invalid: "Invalid email/password combination"
@@ -135,5 +141,13 @@ en:
     update:
       password_has_been_reset: "Password has been reset"
   this_link: "This link will expire in two hours."
-
-
+  microposts:
+    create:
+      micropost_created!: "Micropost created !"
+    destroy:
+      micropost_deleted: "Micropost deleted"
+    micropost:
+      posted: "Posted"
+      ago: "ago."
+      delete: "delete"
+      you_sure: "You Sure ?"
