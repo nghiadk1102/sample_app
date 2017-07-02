@@ -4,6 +4,9 @@ model:
     maximum_email: 255
     minimum_password: 6
     time: 2
+  microposts:
+    size_post: 140
+    size_bit: 5
 view:
   users:
     size: 50
@@ -12,3 +15,5 @@ helpers:
 controller:
   user_controller:
     size_page: 20
+microposts:
+  size_img: 50
