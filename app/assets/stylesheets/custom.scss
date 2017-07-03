@@ -8,7 +8,10 @@ $gray-medium-light: #eaeaea;
 $light-gray: #777;
 $gray: #bbb;
 $dark-red: #e8e8e8;
-
+$blue: #e6ffff;
+$blues: #88C6ED;
+$yellow: #ffff00;
+$bl: #333333;
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -19,17 +22,19 @@ $dark-red: #e8e8e8;
 
 body {
   padding-top: 60px;
+  background-color: $blue;
 }
 
 section {
   overflow: auto;
 }
 
-textarea {
-  resize: vertical;
+textarea.form-control {
+  height: 34px;
 }
 
 .center {
+  margin-top: 30px;
   text-align: center;
   h1 {
     margin-bottom: 10px;
@@ -64,7 +69,7 @@ p {
 /* header */
 
 #logo {
-  color: $light-gray;
+  color: $yellow;
   float: left;
   font-size: 1.7em;
   font-weight: bold;
@@ -81,8 +86,8 @@ p {
 /* footer */
 
 footer {
-  border-top: 1px solid #eaeaea;
-  color: $light-gray;
+  border-top: 1px solid #blue;
+  color: #ffff00;
   margin-top: 45px;
   padding-top: 5px;
   a {
@@ -248,9 +253,9 @@ input {
   }
 }
 
-/* microposts */
+/* posts */
 
-.microposts {
+.posts {
   list-style: none;
   padding: 0;
   li {
@@ -267,12 +272,16 @@ input {
     img {
       display: block;
       padding: 5px 0;
+      margin-top: 15px;
     }
   }
   .timestamp {
     color: $gray-light;
     display: block;
     margin-left: 60px;
+    label {
+      color: $bl;
+    }
   }
   .gravatar {
     float: left;
@@ -292,4 +301,66 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+label {
+  cursor: pointer;
+}
+
+ol > li{
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+ul > li {
+  margin-bottom: 10px;
+}
+/* button */
+
+.comment {
+  float: right;
+  width: 50px;
+  text-align: center;
+  height: 5px;
+  margin-top: 0px;
+  border-radius: 12px;
+  background-color: #00b3b3;
+}
+
+.text_area {
+  margin-bottom: 0px;
+}
+
+.navbar-inverse {
+
+  border-color: $blues;
+  .navbar-nav > li > a {
+    color: $yellow;
+  }
+}
+
+.video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  position: relative;
+  top: 30%;
+  z-index: 2;
+  margin: 0 auto;
+  max-width: 720px;
+  text-align: center;
+}
+
+.comment_list {
+  margin-top: 20px;
 }

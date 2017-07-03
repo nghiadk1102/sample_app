@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
     if @user.save
       @user.send_activation_email
-      flash[:info] = t ".check_email"
+      flash.now[:info] = t ".check_email"
       redirect_to root_url
     else
       render :new
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @microposts = @user.microposts.paginate page: params[:page]
+    @posts = @user.posts.paginate page: params[:page]
   end
 
   def edit

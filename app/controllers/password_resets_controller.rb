@@ -22,6 +22,7 @@ class PasswordResetsController < ApplicationController
   end
 
   def update
+    byebug
     if params[:user][:password].empty?
       @user.errors.add :password, t(".cant_be_empty")
       render :edit
@@ -50,7 +51,7 @@ class PasswordResetsController < ApplicationController
 
   def valid_user
     return if @user && @user.activated? &&
-      @user.authenticated? :reset, params[:id]
+      @user.authenticated?(:reset, params[:id])
     redirect_to root_url
   end
 
