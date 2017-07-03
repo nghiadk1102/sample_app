@@ -27,6 +27,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @microposts = @user.microposts.paginate page: params[:page]
   end
 
   def edit
@@ -48,6 +49,18 @@ class UsersController < ApplicationController
       flash[:success] = t ".error"
     end
     redirect_to users_url
+  end
+
+  def following
+    @title = "Following"
+    @users = @user.following.paginate page: params[:page]
+    render "show_follow"
+  end
+
+  def followers
+    @title = "Followers"
+    @users = @user.followers.paginate page: params[:page]
+    render "show_follow"
   end
 
   private
