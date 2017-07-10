@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
     if @user.save
       @user.send_activation_email
-      flash[:info] = t ".check_email"
+      flash.now[:info] = t ".check_email"
       redirect_to root_url
     else
       render :new
@@ -27,6 +27,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @posts = @user.posts.paginate page: params[:page]
   end
 
   def edit
@@ -48,6 +49,18 @@ class UsersController < ApplicationController
       flash[:success] = t ".error"
     end
     redirect_to users_url
+  end
+
+  def following
+    @title = "Following"
+    @users = @user.following.paginate page: params[:page]
+    render "show_follow"
+  end
+
+  def followers
+    @title = "Followers"
+    @users = @user.followers.paginate page: params[:page]
+    render "show_follow"
   end
 
   private

@@ -1,11 +1,24 @@
-<%= form_for @user do |f| %>
-  <%= render "shared/error_messages" %>
+<%= form_for user do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
 
   <%= f.label t(".name") %>
   <%= f.text_field :name, class: "form-control" %>
 
   <%= f.label t(".email") %>
-  <%= f.email_field :email, class: "form-control" %>
+  <% if params[:action] == "edit" %>
+    <%= f.email_field :email, readonly: true, class: "form-control" %>
+  <% else %>
+    <%= f.email_field :email, class: "form-control" %>
+  <% end %>
+
+  <%= f.label t(".date") %>
+  <%= f.date_field :birth_day, class: "form-control" %>
+
+  <%= f.label t(".address") %>
+  <%= f.text_field :address, class: "form-control" %>
+
+  <%= f.label t(".phone") %>
+  <%= f.telephone_field :phone, class: "form-control" %>
 
   <%= f.label t(".password") %>
   <%= f.password_field :password, class: "form-control" %>
@@ -15,3 +28,4 @@
 
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>
+

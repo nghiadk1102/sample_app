@@ -2,6 +2,15 @@ en:
   account_activations:
     account_activated: "Account activated!"
     invalid_activation_link: "Invalid activation link"
+  comments:
+    form:
+      post: "Post"
+    comment:
+      post: "Post"
+      delete: "Delete"
+      ago: "ago."
+    destroy:
+      comment_deleted: "Comment delected"
   static_pages:
     about:
       about: "About"
@@ -31,43 +40,29 @@ en:
       sample_application: "sample application."
       signup_now: "Sign up now!"
       this_is_the_home_page: "This is the home page for the"
-      welcome: "Welcome to the Sample App"
+      welcome: "Welcome to the World"
+      post_feed: "Post feed"
   layouts:
-    _footer:
-        about: "About"
-        by: "By"
-        contact: "Contact"
-        michael_hartl: "Michael Hartl"
-        news: "News"
-        ruby_on_rails: "Ruby On Rails"
-        the: "The"
-    _header:
+    footer:
+      about: "About"
+      by: "By"
+      contact: "Contact"
+      michael_hartl: "Michael Hartl"
+      news: "News"
+      ruby_on_rails: "Ruby On Rails"
+      the: "The"
+    application:
+      rubyonrails: "Ruby on Rails Tutorial Sample App"
+    header:
       help: "Help"
       home: "Home"
-      login: "log in"
-      sample_app: "sample app"
       users: "Users"
       account: "Account"
+      login: "log in"
+      fake_book: "FAKE BOOK"
       profile: "Profile"
       settings: "Settings"
       logout: "Log out"
-    application:
-      rubyonrails: "Ruby on Rails Tutorial Sample App"
-  users:
-    edit:
-      edit_users: "Edit User"
-      update_your_profile: "Update your profile"
-      save_changes: "Save changes"
-      please: "Please log in"
-    new:
-      signup: "Sign up"
-      this_will_be: "This will be a signup page for new users."
-      name: "name"
-      create: "Create my account"
-      pw_conf: "Password_confirmation"
-      email: "Email"
-      password: "Password"
-      create: "Create my account"
     create:
       welcome: "Welcome to the Sample App!"
       check_email: "Please check your email to activate your account."
@@ -75,26 +70,37 @@ en:
       name: "Name"
       email: "Email"
       password: "Password"
-      password_confirmation: "Password_confirmation"
+      password_confirmation: "Password confirmation"
     index:
       all_users: "All users"
-    user:
-      delete: "Delete"
-      you_sure: "You sure ?"
     destroy:
       user_delete: "User deleted"
       error: "deleted error"
-    update:
-      profile_updated: "Profile updated"
+    show:
+      post: "Post"
+    follow:
+      follow: "Follow"
+    user:
+      delete: "Delete"
   shared:
     error_messages:
       the_form_contains: "The form contains has"
       error: "error"
+    post_form:
+      post: "Post"
+      compose_new_post: "Compose new post"
+    user_info:
+      view_my_profile: "View my profile"
+      post: "Post"
+    stats:
+      following: "Following"
+      followed: "Followed"
   sessions:
     create:
       invalid: "Invalid email/password combination"
       account_not_activated: "Account not activated."
       check_email: "Check your email for the activation link."
+      found: "account or password not found"
     new:
       new_user: "New user?"
       login: "Log in"
@@ -135,5 +141,41 @@ en:
     update:
       password_has_been_reset: "Password has been reset"
   this_link: "This link will expire in two hours."
-
+  posts:
+    create:
+      post_created!: "Post created !"
+    destroy:
+      post_deleted: "Post deleted"
+    post:
+      posted: "Posted"
+      ago: "ago."
+      delete: "delete"
+      you_sure: "You Sure ?"
+      comment: "Comment"
+  users:
+    form:
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      password_confirmation: "Password confirmation"
+      date: "Birth day"
+      address: "Address"
+      phone: "Phone"
+    edit:
+      edit_users: "Edit User"
+      save_changes: "Save change"
+      please: "Please log in"
+    new:
+      create: "Create"
+    user:
+      you_sure: "You sure?"
+      delete: "Delete"
+    destroy:
+      user_delete: "User deleted"
+    follow:
+      follow: "Follow"
+    index:
+      all_users: "All users"
+    update:
+      profile_updated: "Profile updated"
 

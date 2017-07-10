@@ -1,0 +1,31 @@
+<% user = comment.user %>
+<li>
+  <%= link_to gravatar_for(user, size: Settings.comments.size_avatar), user %>
+  <%= user.name %> : <%= comment.body %>
+
+
+  <span class="timestamp">
+  <label class="reply">reply</label>
+    <%= time_ago_in_words comment.created_at %>
+    <%= t ".ago" %>
+    <% if current_user.is_user? comment.user %>
+      <%= link_to t(".delete"), comment, method: :delete, class: "delete" %>
+    <% end %>
+  </span>
+
+  <ul>
+    <%= render comment.comment2rd %>
+  </ul>
+
+  <%= form_for(Comment.new, html: {class: "newcomment2rd"}) do |f| %>
+
+      <div class="field">
+        <%= f.hidden_field :post_id, value: comment.post.id %>
+        <%= f.hidden_field :comment1st_id, value: comment.id %>
+        <%= f.text_area :body, class: "form-control" %>
+        <%= f.submit t(".post"), class: "comment" %>
+      </div>
+  <% end %>
+</li>
+
+

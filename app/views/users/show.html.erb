@@ -4,8 +4,27 @@
     <section class="user_info">
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.name %>
+        <%= @user.name %><br>
+        <h5>
+          <%= @user.birth_day %></br></br>
+          <%= @user.address %>
+        </h5>
       </h1>
     </section>
+    <section class="stats">
+      <%= render "shared/stats" %>
+    </section>
   </aside>
+  <div class="col-md-8">
+    <%= render "follow_form" if logged_in? %>
+    <% if @user.posts.any? %>
+      <h3>
+        <%= t ".micopost" %>(<%= @user.posts.count %>)
+      </h3>
+      <ol class="posts">
+        <%= render @posts %>
+      </ol>
+      <%= will_paginate @posts %>
+    <% end %>
+  </div>
 </div>

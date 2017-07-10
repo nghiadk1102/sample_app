@@ -22,6 +22,7 @@ class PasswordResetsController < ApplicationController
   end
 
   def update
+    byebug
     if params[:user][:password].empty?
       @user.errors.add :password, t(".cant_be_empty")
       render :edit
@@ -56,7 +57,7 @@ class PasswordResetsController < ApplicationController
 
   def check_expiration
     return unless @user.password_reset_expired?
-    flash[:danger] = t ".password_reset_has_expired."
+    flash[:danger] = t ".password_reset_has_expired"
     redirect_to new_password_reset_url
   end
 end
